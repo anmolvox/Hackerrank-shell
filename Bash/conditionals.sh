@@ -24,7 +24,9 @@
 #YES
 
 read input
-case $input in
-    y | Y) echo "YES";;
-    n | N) echo "NO";;
-esac  
+
+if [[ "$input" == 'Y' || "$input" == 'y' ]]; then
+    echo 'YES'
+else
+    echo 'NO'
+fi
