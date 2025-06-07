@@ -33,20 +33,13 @@
 #
 #X is less than Y 
 
-read num1
-read num2
+read X
+read Y
 
-if [ "$num1" -gt "$num2" ]
-then
-    echo "X is greater than Y"
+if (( $X < $Y )); then
+    echo 'X is less than Y'
+elif (( $X > $Y )); then
+    echo 'X is greater than Y'
 else
-   if [ "$num1" -eq "$num2" ]
-   then
-        echo "X is equal to Y"
-   else
-      if [ "$num1" -lt "$num2" ]
-      then
-        echo "X is less than Y"
-      fi
-   fi
-fi 
+    echo 'X is equal to Y'
+fi
