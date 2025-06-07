@@ -24,6 +24,4 @@
 #    r
 #    w
 
-while read input; do
-    echo "$input" | cut -c3
-done
+cut -c 3
