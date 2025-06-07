@@ -36,14 +36,14 @@
 #
 #EQUILATERAL
 
-read side1
-read side2
-read side3
+read X
+read Y
+read Z
 
-if [ "$side1" == "$side2" ] && [ "$side2" == "$side3" ]; then
-    echo "EQUILATERAL"
-elif [ "$side1" -lt "$side2" ] && [ "$side2" -lt "$side3" ]; then
-    echo "SCALENE"
+if [[ "$X" == "$Y" && "$X" == "$Z" ]]; then
+    echo 'EQUILATERAL'
+elif [[ "$X" == "$Y" || "$X" == "$Z" || "$Y" == "$Z" ]] ; then
+    echo 'ISOSCELES'
 else
-    echo "ISOSCELES"
-fi  
+    echo 'SCALENE'
+fi 
