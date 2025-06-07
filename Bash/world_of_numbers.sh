@@ -21,7 +21,10 @@
 #10
 #2
 
-read num1
-read num2
+read X
+read Y
 
-echo "$(($num1+$num2))" && echo "$(($num1-$num2))" && echo "$(($num1*$num2))" && echo "$(($num1/$num2))"
+echo "$(( $X + $Y ))"
+echo "$(( $X - $Y ))"
+echo "$(( $X * $Y ))"
+echo "$(( $X / $Y ))"
